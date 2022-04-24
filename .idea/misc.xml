@@ -5,10 +5,14 @@
       <map>
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/drawable/border.xml" value="0.2601851851851852" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login_admin.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login_customer.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_option.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register.xml" value="0.17806484295845998" />
-        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_admin.xml" value="0.171225937183384" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_admin.xml" value="0.21" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_customer.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_options.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_start.xml" value="0.17806484295845998" />
       </map>
     </option>

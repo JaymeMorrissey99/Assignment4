@@ -4,29 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginOptionActivity">
+    tools:context=".RegisterOptions">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logincustomerOption"
+        android:id="@+id/customerOption"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/border"
-        android:text="LOGIN CUSTOMER">
+        android:text="CUSTOMER">
 
     </androidx.appcompat.widget.AppCompatButton>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginadminOption"
+        android:id="@+id/adminOption"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/logincustomerOption"
+        android:layout_below="@id/customerOption"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/border"
-        android:text="LOGIN ADMINISTRATOR">
+        android:text="ADMINISTRATOR">
 
     </androidx.appcompat.widget.AppCompatButton>
+
 
 </RelativeLayout>

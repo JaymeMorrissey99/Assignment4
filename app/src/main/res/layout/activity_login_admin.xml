@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    tools:context=".RegisterAdmin">
-
+    tools:context=".LoginAdmin">
 
     <EditText
-        android:id="@+id/rcompanyEmail"
+        android:id="@+id/ae"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -23,42 +20,27 @@
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/rcompanyPassword"
+        android:id="@+id/ap"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/registerEmail"
+        android:layout_below="@id/ae"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:padding="10dp"
         android:background="@drawable/border"
         android:hint="Password"
         android:textColorHint="@color/black" />
-
-    <EditText
-        android:id="@+id/cconfirmPassword"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@id/registerEmail"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
-        android:padding="10dp"
-        android:background="@drawable/border"
-        android:hint="Password"
-        android:textColorHint="@color/black" />
-
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/registercButton"
+        android:id="@+id/loginBtn"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/registerPassword"
-        android:background="@drawable/border"
         android:layout_marginLeft="50dp"
-        android:text="Create Account">
+        android:layout_below="@id/ap"
+        android:text="Login"
+        android:background="@drawable/border">
 
     </androidx.appcompat.widget.AppCompatButton>
 
-
-</LinearLayout>
+</RelativeLayout>
