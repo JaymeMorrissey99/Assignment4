@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/rcompanyEmail"
+        android:id="@+id/aEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
@@ -18,15 +18,15 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"
-        android:hint="Email"
+        android:hint="Admin Email"
         android:padding="10dp"
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/rcompanyPassword"
+        android:id="@+id/aPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/rcompanyEmail"
+        android:layout_below="@id/aEmail"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
@@ -36,10 +36,10 @@
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/cconfirmPassword"
+        android:id="@+id/acPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/rcompanyPassword"
+        android:layout_below="@id/aPassword"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="50dp"
@@ -50,10 +50,10 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/registercButton"
+        android:id="@+id/registeraButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/cconfirmPassword"
+        android:layout_below="@id/acPassword"
         android:background="@drawable/border"
         android:layout_marginLeft="50dp"
         android:text="Create Account">

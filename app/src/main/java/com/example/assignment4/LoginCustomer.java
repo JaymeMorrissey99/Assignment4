@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import Models.User;
@@ -46,6 +47,7 @@ public class LoginCustomer extends AppCompatActivity {
         ce = findViewById(R.id.e);
         cp = findViewById(R.id.p);
         mLogin = findViewById(R.id.loginBtn);
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
 
 
         mLogin.setOnClickListener(new View.OnClickListener() {
@@ -68,11 +70,11 @@ public class LoginCustomer extends AppCompatActivity {
                 if (task.isSuccessful()){
                     mUser = mAuth.getCurrentUser();
                     uid = mUser.getUid();
-                    //CheckUserType(uid);
-                    Intent intent = new Intent(LoginCustomer.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
+                    CheckUserType(uid);
+//                    Intent intent = new Intent(LoginCustomer.this, MainActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                    finish();
                 }
                 else{
                     Toast.makeText(LoginCustomer.this, "Fehler"+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -85,11 +87,27 @@ public class LoginCustomer extends AppCompatActivity {
 
     //POTENTIAL PATTERN
 
-//    private void CheckUserType(String uid) {
-//        //uid = mUser.getUid();
-//        databaseReference.child(uid).addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+    private void CheckUserType(String uid) {
+        //uid = mUser.getUid();
+        databaseReference.child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    String type = snapshot.child("Type").getValue().toString();
+                    if(type.equals("Admin")){
+                        Intent intent = new Intent(LoginCustomer.this, AdminMain.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
+
+                    }else if(type.equals("Customer")){
+                        Intent intent = new Intent(LoginCustomer.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        finish();
+                    }
+
+                }
 //                User user = snapshot.getValue(User.class);
 //                if(user.getType().equals("Company")){
 //                    sendToCompanyMain();
@@ -97,12 +115,12 @@ public class LoginCustomer extends AppCompatActivity {
 //                else if(user.getType().equals("Model")){
 //                    sendToModelMain();
 //                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//    }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 }
