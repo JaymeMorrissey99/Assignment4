@@ -8,11 +8,11 @@
     tools:context=".RegisterCustomer">
 
     <EditText
-        android:id="@+id/registerEmail"
+        android:id="@+id/registercEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"
@@ -21,10 +21,10 @@
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/registerPassword"
+        android:id="@+id/registercPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/registerEmail"
+        android:layout_below="@id/registercEmail"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
@@ -34,37 +34,50 @@
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/confirmPassword"
+        android:id="@+id/confirmcPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/registerEmail"
+        android:layout_below="@id/registercPassword"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="10dp"
         android:padding="10dp"
         android:background="@drawable/border"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:textColorHint="@color/black" />
 
     <EditText
-        android:id="@+id/c"
+        android:id="@+id/fullName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/registerEmail"
+        android:layout_below="@id/confirmcPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        android:hint="Full Name"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/shipaddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/confirmcPassword"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="50dp"
         android:padding="10dp"
         android:background="@drawable/border"
-        android:hint="Password"
+        android:hint="Shipping Address"
         android:textColorHint="@color/black" />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/registerButton"
+        android:id="@+id/registercButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/registerPassword"
+        android:layout_below="@id/shipaddress"
         android:background="@drawable/border"
         android:layout_marginLeft="50dp"
         android:text="Create Account">
