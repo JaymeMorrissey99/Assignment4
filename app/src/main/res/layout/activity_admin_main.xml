@@ -11,16 +11,6 @@
         android:layout_height="200dp"
         android:text="ADMIN MAIN"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottom_menu"
-        android:background="@color/white"
-        app:itemIconTint="@color/black"
-        app:menu="@menu/bottom_nav"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="376dp"
-        android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>
