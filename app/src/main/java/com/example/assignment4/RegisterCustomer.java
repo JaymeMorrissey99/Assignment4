@@ -77,6 +77,7 @@ public class RegisterCustomer extends AppCompatActivity {
                         String userid = mUser.getUid();
                         Map<String, Object> user = new HashMap<>();
                         user.put("id", userid);
+                        user.put("Type", "Customer");
                         user.put("Email", e);
                         user.put("Password", p);
                         user.put("Fullname", fn);

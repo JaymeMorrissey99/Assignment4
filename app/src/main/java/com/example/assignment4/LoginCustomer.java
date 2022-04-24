@@ -1,16 +1,27 @@
 package com.example.assignment4;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
+import Models.User;
 
 public class LoginCustomer extends AppCompatActivity {
 
@@ -32,8 +43,8 @@ public class LoginCustomer extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
-        cp = findViewById(R.id.e);
-        ce = findViewById(R.id.p);
+        ce = findViewById(R.id.e);
+        cp = findViewById(R.id.p);
         mLogin = findViewById(R.id.loginBtn);
 
 
@@ -48,5 +59,50 @@ public class LoginCustomer extends AppCompatActivity {
     private void LoginCustomer() {
 
 
+        String email = ce.getText().toString().trim();
+        String pass = cp.getText().toString().trim();
+
+        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    mUser = mAuth.getCurrentUser();
+                    uid = mUser.getUid();
+                    //CheckUserType(uid);
+                    Intent intent = new Intent(LoginCustomer.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+                else{
+                    Toast.makeText(LoginCustomer.this, "Fehler"+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
+
+
+    //POTENTIAL PATTERN
+
+//    private void CheckUserType(String uid) {
+//        //uid = mUser.getUid();
+//        databaseReference.child(uid).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                User user = snapshot.getValue(User.class);
+//                if(user.getType().equals("Company")){
+//                    sendToCompanyMain();
+//                }
+//                else if(user.getType().equals("Model")){
+//                    sendToModelMain();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 }
