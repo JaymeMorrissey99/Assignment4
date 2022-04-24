@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "347172670027",
+    "firebase_url": "https://paddyassignment-default-rtdb.firebaseio.com",
+    "project_id": "paddyassignment",
+    "storage_bucket": "paddyassignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347172670027:android:8969e76acebc5c569adbce",
+        "android_client_info": {
+          "package_name": "com.example.assignment4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347172670027-0dnnishbg6p3hiuhvonfksr1fgq62hqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIsKIgvvylGBkfCcrqcOUt-X9YEuUC-yY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347172670027-0dnnishbg6p3hiuhvonfksr1fgq62hqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
