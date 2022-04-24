@@ -60,7 +60,6 @@ public class LoginCustomer extends AppCompatActivity {
 
     private void LoginCustomer() {
 
-
         String email = ce.getText().toString().trim();
         String pass = cp.getText().toString().trim();
 
