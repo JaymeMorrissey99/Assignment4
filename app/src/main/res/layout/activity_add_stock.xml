@@ -6,9 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".AddStock">
 
+    <ImageView
+        android:id="@+id/itemPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border"
+        android:layout_marginLeft="100dp" />
+
+
     <TextView
+        android:id="@+id/itemttl"
+        android:layout_below="@id/itemPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Item Name:"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/ititle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ADD sTOCK" />
+        android:layout_height="40dp"
+        android:layout_below="@id/itemttl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/modelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ititle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Category:"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/icategory"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/modelEmail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icategory"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Item Price:"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/iprice"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/price"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="£"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/iprice"
+        android:id="@+id/additem"
+        android:layout_centerInParent="true"
+        android:text="ADD ITEM"
+        android:layout_marginTop="20dp"/>
+
 
 </RelativeLayout>
