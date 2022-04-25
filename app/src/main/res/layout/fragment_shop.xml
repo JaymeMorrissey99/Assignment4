@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     tools:context="Frgments.ShopFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="shop" />
+        android:id="@+id/shoppingRV">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment4">
         <activity
+            android:name=".AddToCart"
+            android:exported="true" />
+        <activity
+            android:name=".LeaveReview"
+            android:exported="true" />
+        <activity
             android:name=".EditStock"
             android:exported="true" />
         <activity
@@ -32,8 +38,7 @@
             android:exported="true" />
         <activity
             android:name=".AdminMain"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".LoginAdmin"
             android:exported="true" />
@@ -45,7 +50,7 @@
             android:exported="true" />
         <activity
             android:name=".StartActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegisterCustomer"
             android:exported="true" />
@@ -60,7 +65,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
