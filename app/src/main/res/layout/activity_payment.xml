@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Payment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/paymentRV"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/cname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:text="Total Amount:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ttlPrice"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="300dp"
+        android:layout_toRightOf="@id/cname"
+        android:text="Position:"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/proceedPurchase"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Proceed to Payment" />
+
+
+
 </RelativeLayout>
