@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:gravity="center"
+            android:id="@+id/stockBtn"
             android:text="STOCK"
             android:textSize="20dp"/>
     </androidx.cardview.widget.CardView>
@@ -45,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:gravity="center"
+            android:id="@+id/cusBtn"
             android:text="Customer Details"
             android:textSize="20dp"/>
     </androidx.cardview.widget.CardView>
@@ -62,6 +64,7 @@
             android:layout_height="100dp"
             android:gravity="center"
             android:text="Purchase History"
+            android:id="@+id/pHistory"
             android:textSize="20dp"/>
     </androidx.cardview.widget.CardView>
 

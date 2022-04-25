@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment4">
         <activity
+            android:name=".AdminPurchaseHistory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCustomerDetails"
+            android:exported="true" />
+        <activity
+            android:name=".AdminStock"
+            android:exported="true" />
+        <activity
             android:name=".CustomerPayment"
             android:exported="true" />
         <activity
@@ -44,7 +53,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
