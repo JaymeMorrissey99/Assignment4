@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import java.util.Map;
 public class AddToCart extends AppCompatActivity {
 
     ImageView iPic;
+    ImageView optionImg;
     TextView itemtitle, itemcategory, itemprice, itemmanuf;
     EditText iq;
     Button addsbtn;
@@ -56,6 +58,8 @@ public class AddToCart extends AppCompatActivity {
         itemprice = findViewById(R.id.iprice);
         itemmanuf = findViewById(R.id.imanu);
         iq = findViewById(R.id.iquantity);
+
+//        optionImg = findViewById(R.id.iquantity);
 
         addsbtn = findViewById(R.id.additem);
 
