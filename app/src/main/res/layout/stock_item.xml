@@ -82,14 +82,13 @@
             android:id="@+id/itemPRICE"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/itemBRAND"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/price"
-            android:layout_below="@id/itemBRAND"
             android:text="Position:"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/q"

@@ -72,6 +72,7 @@ public class AddStock extends AppCompatActivity {
         Double p = Double.valueOf(itemp);
 
         Map<String, Object> item = new HashMap<>();
+        String adminID = mUser.getUid();
         String itemId = itemRef.push().getKey();
         item.put("itemID", itemId);
         item.put("itemName", itemName);
@@ -79,6 +80,7 @@ public class AddStock extends AppCompatActivity {
         item.put("manufacturer", manu);
         item.put("itemprice", p);
         item.put("quantity", q);
+//        item.put("quantity", q);
         itemRef.child(itemId).setValue(item).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

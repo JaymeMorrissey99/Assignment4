@@ -2,56 +2,25 @@ package Models;
 
 public class Stock {
 
-    String title;
-    Double price;
     String category;
+    String itemID;
+    String itemName;
+    String price;
     String manufacturer;
     String image;
-    int stockNo;
+    String quantity;
 
     public Stock() {
     }
 
-    public Stock(String title, Double price, String category, String manufacturer, String image, int stockNo) {
-        this.title = title;
-        this.price = price;
+    public Stock(String category, String itemID, String itemName, String price, String manufacturer, String image, String quantity) {
         this.category = category;
+        this.itemID = itemID;
+        this.itemName = itemName;
+        this.price = price;
         this.manufacturer = manufacturer;
         this.image = image;
-        this.stockNo = stockNo;
-
-    }
-
-    public int getStockNo() {
-        return stockNo;
-    }
-
-    public void setStockNo(int stockNo) {
-        this.stockNo = stockNo;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
+        this.quantity = quantity;
     }
 
     public String getCategory() {
@@ -62,11 +31,51 @@ public class Stock {
         this.category = category;
     }
 
+    public String getItemID() {
+        return itemID;
+    }
+
+    public void setItemID(String itemID) {
+        this.itemID = itemID;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 }
