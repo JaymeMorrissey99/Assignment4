@@ -1,5 +1,6 @@
 package Frgments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,7 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.assignment4.AdminCustomerDetails;
+import com.example.assignment4.AdminMain;
+import com.example.assignment4.AdminPurchaseHistory;
+import com.example.assignment4.AdminStock;
+import com.example.assignment4.LeaveReview;
+import com.example.assignment4.LoginCustomer;
+import com.example.assignment4.MyCart;
 import com.example.assignment4.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,16 +39,8 @@ import Models.Stock;
 
 public class MyStuffFragment extends Fragment {
 
-    RecyclerView shopRV;
-    DatabaseReference stockRef, userRef;
+    Button mycart, myreview, logout;
     FirebaseAuth mAuth;
-    FirebaseUser muser;
-    DatabaseReference stockref;
-
-    private StockAdaptor stockAdaptor;
-    private List<Stock> shoppingList;
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,29 +48,44 @@ public class MyStuffFragment extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_my_stuff, container, false);
 
+        mAuth = FirebaseAuth.getInstance();
 
-        return v;
-    }
+        mycart = v.findViewById(R.id.myCart);
+        myreview = v.findViewById(R.id.myRev);
+        logout = v.findViewById(R.id.logout);
 
-    private void LoadItems() {
 
-        stockref = FirebaseDatabase.getInstance().getReference().child("Stock");
-
-        stockref.addValueEventListener(new ValueEventListener() {
+        mycart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                shoppingList.clear();
-                for(DataSnapshot d: snapshot.getChildren()){
-                    Stock s = d.getValue(Stock.class);
-                    shoppingList.add(s);
-                }
-                stockAdaptor.notifyDataSetChanged();
+            public void onClick(View view) {
+                //Toast.makeText(.this, "Successful Register", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), MyCart.class);
+                startActivity(intent);
             }
+        });
 
+        myreview.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onClick(View view) {
+               // Toast.makeText(AdminMain.this, "Successful Register", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), LeaveReview.class);
+                startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             //   Toast.makeText(AdminMain.this, "Successful Register", Toast.LENGTH_SHORT).show();
+                mAuth.signOut();
+                Intent intent = new Intent(getContext(), LoginCustomer.class);
+                startActivity(intent);
+
 
             }
         });
+        return v;
     }
+
+
 }
