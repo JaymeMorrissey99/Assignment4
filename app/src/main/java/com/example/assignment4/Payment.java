@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +35,7 @@ public class Payment extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     DatabaseReference stockref;
+    Button prop;
 
     private MyCartAdaptor myCartAdaptor;
     private List<Cart> cartList;
@@ -45,6 +49,9 @@ public class Payment extends AppCompatActivity {
         muser = mAuth.getCurrentUser();
         payRV = findViewById(R.id.paymentRV);
         totalPrice = findViewById(R.id.ttlPrice);
+        prop = findViewById(R.id.proceedPurchase);
+
+        prop.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) { SendToPayment(); }});
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         payRV.setLayoutManager(linearLayoutManager);
         //new ItemTouchHelper(itemtouch).attachToRecyclerView(cartRV);
@@ -53,6 +60,17 @@ public class Payment extends AppCompatActivity {
         payRV.setAdapter(myCartAdaptor);
 
         LoadCart();
+        GetTotalAmount();
+    }
+
+    private void GetTotalAmount() {
+
+    }
+
+    private void SendToPayment() {
+        Intent intent = new Intent(Payment.this, PaywithCard.class);
+        //intent.putExtra("totalAmt", totalAmount);
+        startActivity(intent);
     }
 
     private void LoadCart() {

@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +36,7 @@ public class MyCart extends AppCompatActivity{
     FirebaseAuth mAuth;
     FirebaseUser muser;
     DatabaseReference stockref;
+    Button pay;
 
     private MyCartAdaptor myCartAdaptor;
     private List<Cart> cartList;
@@ -45,6 +49,7 @@ public class MyCart extends AppCompatActivity{
         mAuth = FirebaseAuth.getInstance();
         muser = mAuth.getCurrentUser();
         cartRV = findViewById(R.id.mycart);
+        pay = findViewById(R.id.payment);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         cartRV.setLayoutManager(linearLayoutManager);
         new ItemTouchHelper(itemtouch).attachToRecyclerView(cartRV);
@@ -52,7 +57,13 @@ public class MyCart extends AppCompatActivity{
         myCartAdaptor = new MyCartAdaptor(this, cartList);
         cartRV.setAdapter(myCartAdaptor);
 
-
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyCart.this, Payment.class);
+                startActivity(intent);
+            }
+        });
 
 
         LoadCart();

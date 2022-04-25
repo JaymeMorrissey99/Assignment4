@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment4">
         <activity
+            android:name=".PaywithCard"
+            android:exported="false" />
+        <activity
             android:name=".EditCartItem"
             android:exported="true" />
         <activity
@@ -47,9 +50,7 @@
             android:exported="true" />
         <activity
             android:name=".AdminMain"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".LoginAdmin"
             android:exported="true" />
@@ -76,9 +77,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
