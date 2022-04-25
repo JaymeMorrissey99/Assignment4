@@ -28,7 +28,7 @@
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/ititle"
+        android:id="@+id/itemtitle"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/itemttl"
@@ -42,14 +42,14 @@
         android:id="@+id/modelEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ititle"
+        android:layout_below="@id/itemtitle"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="Category:"
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/icategory"
+        android:id="@+id/itemcategory"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/modelEmail"
@@ -63,14 +63,14 @@
         android:id="@+id/manu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/icategory"
+        android:layout_below="@id/itemcategory"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="Manufacturer:"
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/imanu"
+        android:id="@+id/itemmanu"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/manu"
@@ -85,14 +85,14 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imanu"
+        android:layout_below="@id/itemmanu"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="Item Price £:"
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/iprice"
+        android:id="@+id/itemprice"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_below="@id/price"
@@ -107,14 +107,14 @@
         android:id="@+id/q"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/iprice"
+        android:layout_below="@id/itemprice"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:text="Quantity:"
         android:textColor="@color/black" />
 
     <EditText
-        android:id="@+id/iquantity"
+        android:id="@+id/itemquantity"
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:layout_below="@id/q"
@@ -126,10 +126,10 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/additem"
+        android:id="@+id/additemtocart"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@id/iquantity"
+        android:layout_below="@id/itemquantity"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="40dp"
