@@ -59,15 +59,36 @@
         android:padding="10dp"
         android:textColor="@color/black" />
 
-
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/manu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/icategory"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="Item Price:"
+        android:text="Manufacturer:"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/imanu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/manu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imanu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Item Price £:"
         android:textColor="@color/black" />
 
     <EditText
@@ -77,19 +98,42 @@
         android:layout_below="@id/price"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
-        android:text="£"
         android:background="@drawable/border"
         android:padding="10dp"
+        android:text=""
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iprice"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Quantity:"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/iquantity"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/q"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:text=""
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/additem"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_below="@id/iprice"
-        android:id="@+id/additem"
+        android:layout_below="@id/iquantity"
         android:layout_centerInParent="true"
-        android:text="ADD ITEM"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:text="ADD ITEM" />
 
 
 </RelativeLayout>

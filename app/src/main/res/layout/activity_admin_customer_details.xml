@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".AdminCustomerDetails">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="cd"/>
+        android:id="@+id/stockrv">
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </RelativeLayout>
