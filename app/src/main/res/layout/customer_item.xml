@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Customer ID: "
+            android:text="Customer Detials: "
             android:textColor="@color/black"
             android:textSize="17sp" />
 
@@ -26,7 +29,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/cid"
-            android:text="Position:"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="17sp" />
 
@@ -48,7 +51,7 @@
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/customerID"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="21dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/cname"
             android:text="Position:"
@@ -97,11 +100,11 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/cEMAIL"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/ship"
-            android:text="Position:"
             android:maxLines="2"
+            android:text="Position:"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
