@@ -5,7 +5,7 @@ public class Stock {
     String category;
     String itemID;
     String itemName;
-    String price;
+    String itemprice;
     String manufacturer;
     String image;
     String quantity;
@@ -13,13 +13,30 @@ public class Stock {
     public Stock() {
     }
 
-    public Stock(String category, String itemID, String itemName, String price, String manufacturer, String image, String quantity) {
+
+    public Stock(String category, String itemID, String itemName, String itemprice, String manufacturer, String image, String quantity) {
         this.category = category;
         this.itemID = itemID;
         this.itemName = itemName;
-        this.price = price;
+        this.itemprice = itemprice;
         this.manufacturer = manufacturer;
         this.image = image;
+        this.quantity = quantity;
+    }
+
+    public String getItemprice() {
+        return itemprice;
+    }
+
+    public void setItemprice(String itemprice) {
+        this.itemprice = itemprice;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
@@ -47,13 +64,6 @@ public class Stock {
         this.itemName = itemName;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
 
     public String getManufacturer() {
         return manufacturer;
@@ -71,11 +81,4 @@ public class Stock {
         this.image = image;
     }
 
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
 }

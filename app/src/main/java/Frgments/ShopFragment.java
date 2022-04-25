@@ -25,6 +25,7 @@ import java.util.List;
 
 import Adaptor.StockAdaptor;
 import Models.Stock;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ShopFragment extends Fragment {
 
@@ -33,6 +34,7 @@ public class ShopFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     DatabaseReference stockref;
+    CircleImageView shoebtn, jacketbtn, tshirtbtn, pantsbtn;
 
     private StockAdaptor stockAdaptor;
     private List<Stock> shoppingList;
@@ -45,6 +47,11 @@ public class ShopFragment extends Fragment {
         View v=  inflater.inflate(R.layout.fragment_shop, container, false);
 
         shopRV = v.findViewById(R.id.shoppingRV);
+
+        shoebtn = v.findViewById(R.id.shoe);
+        jacketbtn = v.findViewById(R.id.jacket);
+        tshirtbtn = v.findViewById(R.id.tshirts);
+        pantsbtn = v.findViewById(R.id.pants);
 
         stockref = FirebaseDatabase.getInstance().getReference().child("Stock");
 

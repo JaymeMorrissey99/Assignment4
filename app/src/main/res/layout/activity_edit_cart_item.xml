@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/teal_200"
     tools:context=".EditCartItem">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:id="@+id/itemPic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            />
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Enter New Quantity: "
+               android:layout_below="@id/itemPic"
+               android:id="@+id/quan"
+               android:textSize="20dp"
+               android:textStyle="bold"
+               android:layout_marginTop="20dp"
+               android:layout_marginLeft="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemPic"
+
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/quan" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateQ"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/quan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Update Quantity" />
+
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toRightOf="@id/quan"-->
+<!--                margin-->
+<!--                android:layout_below="@id/itemPic"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="count"/>-->
+
+
+</RelativeLayout>

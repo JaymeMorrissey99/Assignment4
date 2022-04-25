@@ -4,19 +4,42 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/drawable/border.xml" value="0.2601851851851852" />
-        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_admin_main.xml" value="0.12135416666666667" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/drawable/border_main.xml" value="0.1815" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_add_stock.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_add_to_cart.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_admin_customer_details.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_admin_main.xml" value="0.15" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_admin_purchase_history.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_admin_stock.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_customer_payment.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_edit_cart_item.xml" value="0.25" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_edit_stock.xml" value="0.13697916666666668" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_leave_review.xml" value="0.1" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login_admin.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login_customer.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_login_option.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_my_cart.xml" value="0.1" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_option.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_payment.xml" value="0.1" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_admin.xml" value="0.21" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_customer.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_register_options.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_review.xml" value="0.1" />
         <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/activity_start.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/cart_item.xml" value="0.33" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/customer_item.xml" value="0.4634146341463415" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/customermain.xml" value="0.13179347826086957" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/fragment_my_stuff.xml" value="0.17119565217391305" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/fragment_shop.xml" value="0.18" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/shop_item.xml" value="0.17119565217391305" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/stock_item.xml" value="0.25" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/layout/stockitem.xml" value="0.25" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/menu/bottom_admin_menu.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/menu/bottom_nav.xml" value="0.15416666666666667" />
+        <entry key="..\:/Users/I537849/AndroidStudioProjects/Assignment4/app/src/main/res/menu/cartitemmenu.xml" value="0.175" />
       </map>
     </option>
   </component>

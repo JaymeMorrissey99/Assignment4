@@ -41,7 +41,7 @@ public class StockAdaptor extends RecyclerView.Adapter<StockVH> {
     @NonNull
     @Override
     public StockVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(mContext).inflate(R.layout.stock_item, parent, false);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.stockitem, parent, false);
         return new StockVH(v);
     }
 
@@ -53,7 +53,8 @@ public class StockAdaptor extends RecyclerView.Adapter<StockVH> {
         Stock s = stockList.get(position);
         holder.itemN.setText(s.getItemName());
         holder.itemB.setText(s.getManufacturer());
-        holder.itemP.setText(s.getPrice());
+//        double p = s.getPrice();
+        holder.itemP.setText(s.getItemprice());
         holder.itemQuan.setText(s.getQuantity());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

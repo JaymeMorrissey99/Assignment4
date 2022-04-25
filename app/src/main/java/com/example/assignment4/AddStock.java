@@ -46,11 +46,11 @@ public class AddStock extends AppCompatActivity {
         itemRef = FirebaseDatabase.getInstance().getReference().child("Stock");
 
         iPic = findViewById(R.id.itemPic);
-        itemtitle = findViewById(R.id.ititle);
-        itemcategory = findViewById(R.id.icategory);
-        itemprice = findViewById(R.id.iprice);
-        imanuf = findViewById(R.id.imanu);
-        iq = findViewById(R.id.iquantity);
+        itemtitle = findViewById(R.id.itemtitle);
+        itemcategory = findViewById(R.id.itemcategory);
+        itemprice = findViewById(R.id.itemprice);
+        imanuf = findViewById(R.id.itemmanu);
+        iq = findViewById(R.id.itemquantity);
 
         addsbtn = findViewById(R.id.additem);
 
@@ -68,8 +68,8 @@ public class AddStock extends AppCompatActivity {
         String itemp = itemprice.getText().toString().trim();
         String manu = imanuf.getText().toString().trim();
         String q = iq.getText().toString().trim();
-        int quantity = Integer.parseInt(q);
-        Double p = Double.valueOf(itemp);
+//        int quantity = Integer.parseInt(q);
+//        Double p = Double.valueOf(itemp);
 
         Map<String, Object> item = new HashMap<>();
         String adminID = mUser.getUid();
@@ -78,7 +78,7 @@ public class AddStock extends AppCompatActivity {
         item.put("itemName", itemName);
         item.put("category", itemCategory);
         item.put("manufacturer", manu);
-        item.put("itemprice", p);
+        item.put("itemprice", itemp);
         item.put("quantity", q);
 //        item.put("quantity", q);
         itemRef.child(itemId).setValue(item).addOnCompleteListener(new OnCompleteListener<Void>() {
