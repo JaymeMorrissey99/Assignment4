@@ -33,7 +33,7 @@
                 android:layout_height="50dp"
                 android:src="@drawable/shoes"
                 android:id="@+id/shoe"
-                android:layout_marginStart="55dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="60dp"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -43,6 +43,14 @@
                 android:id="@+id/jacket"
                 android:layout_marginTop="60dp"
                 android:src="@drawable/img"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/reset"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/img_2"/>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="50dp"

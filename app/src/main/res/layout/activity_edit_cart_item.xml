@@ -5,17 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/teal_200"
+    android:background="@color/white"
     tools:context=".EditCartItem">
 
 
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:id="@+id/itemPic"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            />
+    <ImageView
+        android:id="@+id/itemPic"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/numPicker"/>
+
+
 
 
            <TextView
@@ -29,23 +38,34 @@
                android:layout_marginTop="20dp"
                android:layout_marginLeft="10dp"/>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="50dp"
+    <TextView
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/itemPic"
-
-        android:layout_marginLeft="70dp"
+        android:layout_toEndOf="@id/quan"
+        android:id="@+id/qNumber"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/quan" />
+        android:layout_marginLeft="10dp"/>
+
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/itemPic"-->
+
+<!--        android:layout_marginLeft="70dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_toRightOf="@id/quan" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/updateQ"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:layout_below="@id/quan"
+        android:layout_below="@id/numPicker"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="Update Quantity" />
 
 

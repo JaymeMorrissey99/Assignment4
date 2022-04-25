@@ -9,11 +9,12 @@ public class Cart {
     String itemprice;
     String itemquantity;
     String manufacturer;
+    String itemID;
 
     public Cart() {
     }
 
-    public Cart(String customerID, String cartitemID, String category, String itemName, String itemprice, String itemquantity, String manufacturer) {
+    public Cart(String customerID, String cartitemID, String category, String itemName, String itemprice, String itemquantity, String manufacturer, String itemID) {
         CustomerID = customerID;
         this.cartitemID = cartitemID;
         this.category = category;
@@ -21,6 +22,15 @@ public class Cart {
         this.itemprice = itemprice;
         this.itemquantity = itemquantity;
         this.manufacturer = manufacturer;
+        this.itemID = itemID;
+    }
+
+    public String getItemID() {
+        return itemID;
+    }
+
+    public void setItemID(String itemID) {
+        this.itemID = itemID;
     }
 
     public String getManufacturer() {

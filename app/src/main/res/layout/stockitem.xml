@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="4dp"
+    android:layout_margin="8dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -13,8 +14,8 @@
 
         <ImageView
             android:id="@+id/itempic"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
             android:layout_centerHorizontal="true"
             android:src="@mipmap/ic_launcher" />
 
@@ -27,7 +28,7 @@
             android:layout_marginTop="10dp"
             android:text="Item: "
             android:textColor="@color/black"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:textStyle="bold"/>
 
         <TextView
@@ -40,7 +41,7 @@
             android:layout_toRightOf="@id/itemttl"
             android:text="Position:"
             android:textColor="@color/black"
-            android:textSize="26sp" />
+            android:textSize="22sp" />
 
 
         <TextView
@@ -53,7 +54,7 @@
             android:maxLines="1"
             android:text="Brand:"
             android:textColor="@color/black"
-            android:textSize="26dp"
+            android:textSize="24dp"
             android:textStyle="bold"/>
 
         <TextView
@@ -66,7 +67,7 @@
             android:layout_toRightOf="@id/Manu"
             android:text="Position:"
             android:textColor="@color/black"
-            android:textSize="26sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/price"
@@ -78,7 +79,7 @@
             android:maxLines="1"
             android:text="Price:"
             android:textColor="@color/black"
-            android:textSize="26dp"
+            android:textSize="24dp"
             android:textStyle="bold"/>
 
         <TextView
@@ -91,7 +92,7 @@
             android:layout_toRightOf="@id/price"
             android:text="Position:"
             android:textColor="@color/black"
-            android:textSize="26sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/q"
@@ -103,7 +104,7 @@
             android:maxLines="1"
             android:text="Qty: "
             android:textColor="@color/black"
-            android:textSize="26dp"
+            android:textSize="24dp"
             android:textStyle="bold"/>
 
         <TextView
@@ -116,7 +117,7 @@
             android:layout_toRightOf="@id/q"
             android:text="Position:"
             android:textColor="@color/black"
-            android:textSize="26sp" />
+            android:textSize="22sp" />
 
     </RelativeLayout>
 

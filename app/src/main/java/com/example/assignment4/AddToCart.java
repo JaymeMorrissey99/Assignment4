@@ -121,6 +121,8 @@ public class AddToCart extends AppCompatActivity {
         cart.put("manufacturer", itemM);
         cart.put("itemprice", itemP);
         cart.put("itemquantity", q);
+        cart.put("itemID", itemid);
+
         mycart.child(itemId).setValue(cart).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

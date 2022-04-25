@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/shop"
-        android:title="Shop"/>
+        android:title="Shop" />
 
 
     <item

@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class ShopFragment extends Fragment {
     FirebaseAuth mAuth;
     FirebaseUser muser;
     DatabaseReference stockref;
-    CircleImageView shoebtn, jacketbtn, tshirtbtn, pantsbtn;
+    CircleImageView shoebtn, jacketbtn, tshirtbtn, pantsbtn, reset;
 
     private StockAdaptor stockAdaptor;
     private List<Stock> shoppingList;
@@ -52,6 +53,7 @@ public class ShopFragment extends Fragment {
         jacketbtn = v.findViewById(R.id.jacket);
         tshirtbtn = v.findViewById(R.id.tshirts);
         pantsbtn = v.findViewById(R.id.pants);
+        reset = v.findViewById(R.id.reset);
 
         stockref = FirebaseDatabase.getInstance().getReference().child("Stock");
 
@@ -62,9 +64,95 @@ public class ShopFragment extends Fragment {
         stockAdaptor = new StockAdaptor(getContext(), shoppingList);
         shopRV.setAdapter(stockAdaptor);
 
+        shoebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadShoes();
+            }
+        });
+
+
+        jacketbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadJackets();
+            }
+        });
+
+        tshirtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadTShirts();
+            }
+        });
+
+        pantsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadPants();
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LoadItems();
+            }
+        });
+
+
         LoadItems();
 
         return v;
+    }
+
+    private void LoadPants() {
+    }
+
+    private void LoadTShirts() {
+    }
+
+    private void LoadJackets() {
+
+        Query q = stockref.orderByChild("category").equalTo("Jacket");
+        q.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                shoppingList.clear();
+                for(DataSnapshot d: snapshot.getChildren()){
+                    Stock s = d.getValue(Stock.class);
+                    shoppingList.add(s);
+                }
+                stockAdaptor.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void LoadShoes() {
+
+        Query q = stockref.orderByChild("category").equalTo("Shoes");
+        q.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                shoppingList.clear();
+                for(DataSnapshot d: snapshot.getChildren()){
+                    Stock s = d.getValue(Stock.class);
+                    shoppingList.add(s);
+                }
+                stockAdaptor.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     private void LoadItems() {
