@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,6 +40,13 @@ public class Payment extends AppCompatActivity {
 
     private MyCartAdaptor myCartAdaptor;
     private List<Cart> cartList;
+//    ArrayList<String>qp;
+    List<Cart>cartTotal;
+
+
+    double ttl, ttlprice;
+    int q;
+    double p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +71,67 @@ public class Payment extends AppCompatActivity {
         GetTotalAmount();
     }
 
-    private void GetTotalAmount() {
+    private Double GetTotalAmount() {
 
+        stockref =  FirebaseDatabase.getInstance().getReference().child("Stock");
+        cartRef = FirebaseDatabase.getInstance().getReference().child("MyCart");
+//        double ttl;
+//        int q;
+//        double p;
+        String u = muser.getUid();
+        Query query = cartRef.orderByChild("CustomerID").equalTo(u);
+
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    for(DataSnapshot d: snapshot.getChildren()){
+                        String p = d.child("itemprice").getValue().toString();
+                        String q = d.child("itemquantity").getValue().toString();
+                        ttlprice = Double.parseDouble(p)*Integer.parseInt(q);
+                        ttl = ttl + ttlprice;
+//                        Cart c = d.getValue(Cart.class);
+//                        cartTotal = new ArrayList<>();
+//                        cartTotal.add(c);
+                        //cartTotal.add(qu);
+                        //calculate(cartList);
+                        totalPrice.setText(String.valueOf(ttl));
+                        Toast.makeText(Payment.this, ""+ ttl, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        //cartRef.
+        return null;
+    }
+
+    private void calculate(List<Cart> cartList) {
+
+        for(Cart i: cartList){
+            String p = i.getItemprice();
+            String q = i.getItemquantity();
+
+            ttlprice = Double.parseDouble(p)*Integer.parseInt(q);
+
+//            Double price = Double.parseDouble(p);
+//            int quan = Integer.parseInt(q);
+
+            //Toast.makeText(this, ""+ price, Toast.LENGTH_SHORT).show();
+            //ttlprice = price * quan;
+            ttl = ttl + ttlprice;
+            totalPrice.setText(String.valueOf(ttl));
+
+        }
+//        Cart c = qp.get(i);
+//        for( d: qp){
+//            String
+//        }
     }
 
     private void SendToPayment() {
