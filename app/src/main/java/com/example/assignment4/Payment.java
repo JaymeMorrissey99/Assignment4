@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,10 +43,12 @@ public class Payment extends AppCompatActivity {
     DatabaseReference stockref;
     Button prop;
 
+    final static String TAG = "cart";
     private MyCartAdaptor myCartAdaptor;
     private List<Cart> cartList;
 //    ArrayList<String>qp;
-    List<Cart>cartTotal;
+    ArrayList<String>itemIDS;
+
 
 
     double ttl, ttlprice;
@@ -58,6 +65,8 @@ public class Payment extends AppCompatActivity {
         payRV = findViewById(R.id.paymentRV);
         totalPrice = findViewById(R.id.ttlPrice);
         prop = findViewById(R.id.proceedPurchase);
+
+        itemIDS = new ArrayList<>();
 
         prop.setOnClickListener(new View.OnClickListener() {@Override public void onClick(View view) { SendToPayment(); }});
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -111,32 +120,38 @@ public class Payment extends AppCompatActivity {
         return null;
     }
 
-    private void calculate(List<Cart> cartList) {
-
-        for(Cart i: cartList){
-            String p = i.getItemprice();
-            String q = i.getItemquantity();
-
-            ttlprice = Double.parseDouble(p)*Integer.parseInt(q);
-
-//            Double price = Double.parseDouble(p);
-//            int quan = Integer.parseInt(q);
-
-            //Toast.makeText(this, ""+ price, Toast.LENGTH_SHORT).show();
-            //ttlprice = price * quan;
-            ttl = ttl + ttlprice;
-            totalPrice.setText(String.valueOf(ttl));
-
-        }
-//        Cart c = qp.get(i);
-//        for( d: qp){
-//            String
+//    private void calculate(List<Cart> cartList) {
+//
+//        for(Cart i: cartList){
+//            String p = i.getItemprice();
+//            String q = i.getItemquantity();
+//
+//            ttlprice = Double.parseDouble(p)*Integer.parseInt(q);
+//
+////            Double price = Double.parseDouble(p);
+////            int quan = Integer.parseInt(q);
+//
+//            //Toast.makeText(this, ""+ price, Toast.LENGTH_SHORT).show();
+//            //ttlprice = price * quan;
+//            ttl = ttl + ttlprice;
+//            totalPrice.setText(String.valueOf(ttl));
+//
 //        }
-    }
+////        Cart c = qp.get(i);
+////        for( d: qp){
+////            String
+////        }
+//    }
 
     private void SendToPayment() {
+        //Array<Cart>cartList
+        //cartList = (ArrayList<Cart>) getIntent().getSerializableExtra("cartlistkey");
+        Bundle b = new Bundle();
+        b.putStringArrayList("itemIDS", itemIDS);
         Intent intent = new Intent(Payment.this, PaywithCard.class);
-        //intent.putExtra("totalAmt", totalAmount);
+        intent.putExtras(b);
+        //intent.putParcelableArrayListExtra("c", (ArrayList<? extends Parcelable>) itemIDS);
+        //intent.putParcelableArrayListExtra("cartListkey", (ArrayList<? extends Parcelable>) cartList);
         startActivity(intent);
     }
 
@@ -152,6 +167,10 @@ public class Payment extends AppCompatActivity {
                 for(DataSnapshot d: snapshot.getChildren()){
                     Cart c = d.getValue(Cart.class);
                     cartList.add(c);
+                    //Log.d(TAG, "onDataChange: "+cartList.toString());
+                    itemIDS.add(c.getItemID());
+                    itemIDS.add(c.getItemquantity());
+                    //Log.d(TAG, "onDataChange: "+ itemIDS.toString());
                 }
                 myCartAdaptor.notifyDataSetChanged();
             }
@@ -162,4 +181,15 @@ public class Payment extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public int describeContents() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public void writeToParcel(Parcel parcel, int i) {
+//        Cart c = (Cart) cartList;
+//        parcel.writeString(c.getItemID());
+//    }
 }

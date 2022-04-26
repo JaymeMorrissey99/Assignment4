@@ -28,7 +28,7 @@ import java.util.List;
 import Adaptor.MyCartAdaptor;
 import Models.Cart;
 
-public class MyCart extends AppCompatActivity{
+public class MyCart extends AppCompatActivity {
 
     RecyclerView cartRV;
     TextView options;
@@ -40,6 +40,8 @@ public class MyCart extends AppCompatActivity{
 
     private MyCartAdaptor myCartAdaptor;
     private List<Cart> cartList;
+    private List<String> itemIDS;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +83,7 @@ public class MyCart extends AppCompatActivity{
                 for(DataSnapshot d: snapshot.getChildren()){
                     Cart c = d.getValue(Cart.class);
                         cartList.add(c);
+                        //itemIDS.add(c.getItemID());
                 }
                 myCartAdaptor.notifyDataSetChanged();
             }
@@ -131,4 +134,7 @@ public class MyCart extends AppCompatActivity{
         return super.onContextItemSelected(item);
 
     }
+
+
+
 }
