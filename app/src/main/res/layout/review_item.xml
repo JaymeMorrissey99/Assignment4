@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,19 +47,19 @@
             android:layout_toRightOf="@id/itempic" />
 
         <EditText
+            android:id="@+id/reviewTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ratingBar"
             android:layout_marginTop="8dp"
-            android:id="@+id/reviewTxt"
             android:layout_toRightOf="@id/itempic"
             android:background="@drawable/border"
             android:hint="Leave a Review..." />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitreview"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:id="@+id/submitreview"
             android:layout_below="@id/reviewTxt"
             android:layout_alignParentEnd="true"
             android:text="Submit" />

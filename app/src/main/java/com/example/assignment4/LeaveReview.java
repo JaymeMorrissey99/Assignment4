@@ -77,12 +77,12 @@ public class LeaveReview extends AppCompatActivity {
         purchaseRef = FirebaseDatabase.getInstance().getReference().child("Purchases");
         stockRef = FirebaseDatabase.getInstance().getReference().child("Stock");
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SubmitReview();
-            }
-        });
+//        submit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SubmitReview();
+//            }
+//        });
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         reviewrv.setLayoutManager(linearLayoutManager);
@@ -97,8 +97,9 @@ public class LeaveReview extends AppCompatActivity {
 
     }
 
-    private void SubmitReview() {
-    }
+//    private void SubmitReview() {
+//
+//    }
 
     private void LoadItem() {
 
