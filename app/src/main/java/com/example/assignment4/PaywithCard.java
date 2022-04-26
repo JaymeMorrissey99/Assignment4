@@ -109,24 +109,11 @@ public class PaywithCard extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(PaywithCard.this, "Successful", Toast.LENGTH_SHORT).show();
-                                    cartref.orderByChild("CustomerID").equalTo(u).addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            if(snapshot.exists()){
-                                                cartref.removeValue();
-                                                Intent intent = new Intent(PaywithCard.this, LeaveReview.class);
+                                    Intent intent = new Intent(PaywithCard.this, LeaveReview.class);
 //                                                intent.putExtras(b);
-                                                //intent.putParcelableArrayListExtra("c", (ArrayList<? extends Parcelable>) itemIDS);
-                                                //intent.putParcelableArrayListExtra("cartListkey", (ArrayList<? extends Parcelable>) cartList);
-                                                startActivity(intent);
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-
-                                        }
-                                    });
+                                    //intent.putParcelableArrayListExtra("c", (ArrayList<? extends Parcelable>) itemIDS);
+                                    //intent.putParcelableArrayListExtra("cartListkey", (ArrayList<? extends Parcelable>) cartList);
+                                    startActivity(intent);
                                 }
                             }
                         });

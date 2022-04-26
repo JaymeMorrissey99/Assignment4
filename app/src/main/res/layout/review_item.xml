@@ -15,7 +15,7 @@
             android:id="@+id/itempic"/>
 
         <TextView
-            android:id="@+id/itemttl"
+            android:id="@+id/ittl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -24,36 +24,45 @@
             android:text="Item: "
             android:textColor="@color/black"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/itemNAME"
+            android:id="@+id/iNAME"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@id/itemttl"
+            android:layout_toRightOf="@id/ittl"
             android:text="Position:"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
         <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/itemttl"
-            android:id="@+id/ratingBar"
-            android:layout_toRightOf="@id/itempic"
+            android:layout_below="@id/ittl"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/itempic" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ratingBar"
-            android:hint="Leave a Review..."
             android:layout_marginTop="8dp"
+            android:id="@+id/reviewTxt"
             android:layout_toRightOf="@id/itempic"
-            android:background="@drawable/border"/>
+            android:background="@drawable/border"
+            android:hint="Leave a Review..." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/submitreview"
+            android:layout_below="@id/reviewTxt"
+            android:layout_alignParentEnd="true"
+            android:text="Submit" />
 
 
     </RelativeLayout>
